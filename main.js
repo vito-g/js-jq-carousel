@@ -48,12 +48,15 @@ $(document).ready(function() {
   }
   $('.next').click(function() {
     var imgNext = fxSlider('.images img.active');
+    // var imgNext = fxSlider('.images img');
     // if ($('.images img.active').class !== $('.images img.last').class) {
     // if ($('.images img.active').attr('class') !== $('.images img.last').attr('class')) {
+    // if ( $('.images img.active')!== $('img.last.active')) {
     if (imgNext !== $('img.last.active')) {
       fxSlider('imgNext');
       console.log(imgNext);//*
     } else {
+      // $('.images img.first').addClass('.active');
       fxSlider('.images img.active.first');
     }
   });
@@ -64,7 +67,6 @@ $(document).ready(function() {
 
   // $('.next').click(function() {
   //   $('.images img.active').removeClass('active').next().addClass('active');
-  //   console.log('OK NEL CLICK');
   // });
 
   // -----questa va benissimo per mandare indietro le immagini (fino ad un certo punto)----
