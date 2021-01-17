@@ -8,6 +8,15 @@ $(document).ready(function() { //Esegui le istruzioni di codice che seguono solo
       $ ('.active').removeClass('active').next().addClass('active'); // Altrimenti rimuovi la Classe 'active' dall'immagine corrente (per nasconderla), passa alla successiva e aggiungi a questa classe active (per visualizzarla)
     }
   })
-  // Analogamente, ma agendo sull'elemento del DOM di Classe 'prev', scorrerò le img in senso inverso
+
+  // Analogamente, ma agendo sull'elemento del DOM di Classe 'prev', scorrerò le img in senso inverso sostituendo l'action next() con l'action prev() e il .last col .first
+  $('.prev').click(function() { //Al click sull'elemento di Classe 'next' verrà eseguito il blocco di codice tra Graffe
+    if ( $('.first').hasClass('active')) { //Se la Classe 'first' ha Classe 'active' (ed è quindi visibile, perchè dotata di display inline-block), esegui il codice tra Graffe.
+      $('.first').removeClass('active'); // Rimuove la Classe 'active' restituendo alla classe' first' il suo display none (che, come da CSS, è associato a tutte le img)
+      $('.last').addClass('active'); // Ripristina la classe 'active' alla prima immagine, consentendomi di ripartire daccapo
+    } else {
+      $ ('.active').removeClass('active').prev().addClass('active'); // Altrimenti rimuovi la Classe 'active' dall'immagine corrente (per nasconderla), passa alla successiva e aggiungi a questa classe active (per visualizzarla)
+    }
+  })
 
 });
