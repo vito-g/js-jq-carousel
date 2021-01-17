@@ -18,5 +18,6 @@ $(document).ready(function() { //Esegui le istruzioni di codice che seguono solo
       $ ('.active').removeClass('active').prev().addClass('active'); // Altrimenti rimuovi la Classe 'active' dall'immagine corrente (per nasconderla), passa alla successiva e aggiungi a questa classe active (per visualizzarla)
     }
   })
+  
   //N.B.: Si noti che, poichè le classi 'first', 'last' e 'active' sono condivise con i pallini...anche questi si attiveranno alternativamente in ragione del fatto che i selettori sono stati scelti nel modo più generico possibile: coinvolgendo, cioè, le sole classi comuni.
 });
